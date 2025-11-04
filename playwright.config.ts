@@ -11,7 +11,7 @@ require('dotenv').config();
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  // testDir: './tests',
+  testDir: './tests',
 
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -44,6 +44,7 @@ export default defineConfig({
   
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    ignoreHTTPSErrors: true,
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
